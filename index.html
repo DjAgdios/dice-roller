@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>Damage Dice Roller</title>
-    <!-- Link to external CSS if desired -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Damage Dice Roller</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Damage Dice Roller</h1>
-    
-    <p>How many dice would you like to roll?</p>
-    <input id="diceCount" type="number" value="1" min="1" />
-    <button onclick="rollDamageDice()">Roll Dice</button>
-    
-    <div id="result"></div>
-    
-    <!-- Link to external JavaScript file -->
-    <script src="script.js"></script>
+  <h1>Damage Dice Roller (Newest Rolls on Top)</h1>
+
+  <p>How many dice would you like to roll?</p>
+  <input id="diceCount" type="number" value="1" min="1" />
+
+  <!-- Roll button -->
+  <button onclick="rollDamageDice()">Roll Dice</button>
+
+  <!-- Hidden Clear Entire Log button (off-screen by default) -->
+  <button id="clearButton" onclick="clearLog()">Clear Entire Log</button>
+
+  <!-- This will show the result of the current roll -->
+  <div id="currentResult" class="resultContainer"></div>
+
+  <hr class="divider">
+
+  <h2>Previous Rolls</h2>
+  <div id="log" class="logContainer"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
